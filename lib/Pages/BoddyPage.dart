@@ -28,7 +28,17 @@ class _BoddyPageState extends State<BoddyPage> {
 
   @override
   Widget build(BuildContext context) {
-    return _body();
+    return Container(
+        child: Column(
+      children: [
+        Container(
+          width: double.infinity,
+          height: 100,
+          color: Colors.transparent,
+        ),
+        Expanded(child: _body()),
+      ],
+    ));
   }
 
   Widget _body() {

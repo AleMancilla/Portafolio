@@ -16,24 +16,46 @@ class LandingPage extends StatelessWidget {
         utilsProvider.primaryColor = Colors.red;
       }),
       body: Container(
-        decoration: BoxDecoration(boxShadow: [
-          BoxShadow(
-              blurRadius: 15, color: Colors.black38, offset: Offset(-7, 10))
-        ]),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: borderRadiusGlobal,
+          boxShadow: [
+            BoxShadow(
+              blurRadius: 15,
+              color: Colors.black38,
+              offset: Offset(-7, 10),
+            )
+          ],
+        ),
         margin: (size.width < 950)
             ? EdgeInsets.symmetric(horizontal: 30, vertical: 40)
-            : EdgeInsets.symmetric(horizontal: 150, vertical: 80),
-        child: Row(
+            : EdgeInsets.symmetric(horizontal: 170, vertical: 80),
+        child: Stack(
           children: [
-            Expanded(
-              flex: 2,
-              child: LeftBanner(),
+            Row(
+              children: [
+                Expanded(
+                  flex: 2,
+                  child: Container(),
+                ),
+                if (size.width > 950)
+                  Expanded(
+                    flex: 5,
+                    child: BoddyPage(),
+                  ),
+              ],
             ),
-            if (size.width > 950)
-              Expanded(
-                flex: 5,
-                child: BoddyPage(),
-              ),
+            Container(
+              decoration: BoxDecoration(boxShadow: [
+                BoxShadow(
+                  color: Colors.black12,
+                  blurRadius: 15,
+                  offset: Offset(10, 0),
+                )
+              ]),
+              child: LeftBanner(),
+              width: (size.width < 950) ? size.width * 0.9 : size.width * 0.22,
+            ),
           ],
         ),
       ),

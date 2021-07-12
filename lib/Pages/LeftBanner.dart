@@ -32,7 +32,7 @@ class _LeftBannerState extends State<LeftBanner> {
     return Container(
       decoration: BoxDecoration(
         color: Colors.white,
-        borderRadius: BorderRadius.circular(5),
+        borderRadius: borderRadiusGlobal,
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -115,7 +115,7 @@ class _LeftBannerState extends State<LeftBanner> {
   Widget _imageSocial(String image, Function ontap) {
     return Container(
       padding: const EdgeInsets.only(bottom: 10),
-      margin: EdgeInsets.symmetric(horizontal: 5),
+      margin: EdgeInsets.symmetric(horizontal: 4),
       child: ClipRRect(
         borderRadius: BorderRadius.circular(100),
         child: Material(
