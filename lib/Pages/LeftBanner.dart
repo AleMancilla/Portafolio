@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portafolio/Widgets/ButtonText.dart';
 import 'package:portafolio/Widgets/CustomDivider.dart';
 import 'package:portafolio/Widgets/ImageHover.dart';
 
@@ -35,6 +36,9 @@ class _LeftBannerState extends State<LeftBanner> {
           Text('Alejandro Mancilla'),
           Text('Ingeniero en Informática'),
           CustomDivider(),
+          ButtenText(),
+          ButtenText(),
+          ButtenText(),
           CustomDivider(),
         ],
       ),

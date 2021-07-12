@@ -17,7 +17,7 @@ class _ImageHoverState extends State<ImageHover> {
     return InkWell(
       onTap: () {},
       onHover: (value) {
-        print(value);
+        // print(value);
         if (value) {
           setState(() {
             elevation = 10.0;
