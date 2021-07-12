@@ -1,14 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:portafolio/Core/Provider/UtilsProvider.dart';
 import 'package:portafolio/Pages/BoddyPage.dart';
 import 'package:portafolio/Pages/LeftBanner.dart';
 import 'package:portafolio/Utils/UtilsDesign.dart';
+import 'package:provider/provider.dart';
 
 class LandingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+    UtilsProvider utilsProvider = Provider.of<UtilsProvider>(context);
     return Scaffold(
-      backgroundColor: backGroundBoddyColor,
+      backgroundColor: utilsProvider.primaryColor,
+      floatingActionButton: FloatingActionButton(onPressed: () {
+        utilsProvider.primaryColor = Colors.red;
+      }),
       body: Container(
         decoration: BoxDecoration(boxShadow: [
           BoxShadow(
