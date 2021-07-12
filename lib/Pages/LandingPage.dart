@@ -77,7 +77,7 @@ class LandingPage extends StatelessWidget {
                     ? size.height - (marginVertical * 2)
                     : size.height - (minmarginVertical * 2),
                 width:
-                    (size.width < 950) ? size.width * 0.9 : size.width * 0.22,
+                    (size.width < 950) ? size.width * 0.85 : size.width * 0.22,
               ),
             ),
           ],

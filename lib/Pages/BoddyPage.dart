@@ -103,13 +103,13 @@ class _BoddyPageState extends State<BoddyPage> {
         return 'ACERCA DE MI';
         break;
       case IndexPage.Contact:
-        return 'HABILIDADES';
+        return 'CONTACTO';
         break;
       case IndexPage.Projects:
         return 'PROYECTOS';
         break;
       case IndexPage.Skills:
-        return 'CONTACTO';
+        return 'HABILIDADES';
         break;
       default:
         return 'ACERCA DE MI';

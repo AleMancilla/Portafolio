@@ -70,10 +70,10 @@ class _LeftBannerState extends State<LeftBanner> {
           ButtenText(
             text: "HABILIDADES",
             ontap: () {
-              utilsProvider.indexPage = IndexPage.Contact;
+              utilsProvider.indexPage = IndexPage.Skills;
               setState(() {});
             },
-            status: utilsProvider.indexPage == IndexPage.Contact,
+            status: utilsProvider.indexPage == IndexPage.Skills,
           ),
           ButtenText(
             text: "PROYECTOS",
@@ -86,10 +86,10 @@ class _LeftBannerState extends State<LeftBanner> {
           ButtenText(
             text: "CONTACTO",
             ontap: () {
-              utilsProvider.indexPage = IndexPage.Skills;
+              utilsProvider.indexPage = IndexPage.Contact;
               setState(() {});
             },
-            status: utilsProvider.indexPage == IndexPage.Skills,
+            status: utilsProvider.indexPage == IndexPage.Contact,
           ),
           SizedBox(height: 15),
           CustomDivider(color: utilsProvider.primaryColor),
