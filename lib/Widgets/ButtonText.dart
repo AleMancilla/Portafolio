@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:portafolio/Core/Provider/UtilsProvider.dart';
-import 'package:portafolio/Utils/UtilsDesign.dart';
 import 'package:provider/provider.dart';
 
 class ButtenText extends StatefulWidget {

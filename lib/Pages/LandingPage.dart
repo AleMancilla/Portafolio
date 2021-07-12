@@ -6,6 +6,11 @@ import 'package:portafolio/Utils/UtilsDesign.dart';
 import 'package:provider/provider.dart';
 
 class LandingPage extends StatelessWidget {
+  final double marginHorizontal = 170;
+  final double marginVertical = 80;
+  final double minmarginHorizontal = 30;
+  final double minmarginVertical = 40;
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -28,8 +33,10 @@ class LandingPage extends StatelessWidget {
           ],
         ),
         margin: (size.width < 950)
-            ? EdgeInsets.symmetric(horizontal: 30, vertical: 40)
-            : EdgeInsets.symmetric(horizontal: 170, vertical: 80),
+            ? EdgeInsets.symmetric(
+                horizontal: minmarginHorizontal, vertical: minmarginVertical)
+            : EdgeInsets.symmetric(
+                horizontal: marginHorizontal, vertical: marginVertical),
         child: Stack(
           children: [
             Row(
@@ -41,20 +48,37 @@ class LandingPage extends StatelessWidget {
                 if (size.width > 950)
                   Expanded(
                     flex: 5,
-                    child: BoddyPage(),
+                    child: Container(),
                   ),
               ],
             ),
-            Container(
-              decoration: BoxDecoration(boxShadow: [
-                BoxShadow(
-                  color: Colors.black12,
-                  blurRadius: 15,
-                  offset: Offset(10, 0),
-                )
-              ]),
-              child: LeftBanner(),
-              width: (size.width < 950) ? size.width * 0.9 : size.width * 0.22,
+            if (size.width > 950)
+              Positioned(
+                right: 0,
+                child: Container(
+                  // color: Colors.yellow,
+                  height: size.height - (marginVertical * 2),
+                  width: (size.width * 0.78) - (marginHorizontal * 2),
+                  child: BoddyPage(),
+                ),
+              ),
+            Positioned(
+              left: 0,
+              child: Container(
+                decoration: BoxDecoration(boxShadow: [
+                  BoxShadow(
+                    color: Colors.black12,
+                    blurRadius: 15,
+                    offset: Offset(10, 0),
+                  )
+                ]),
+                child: LeftBanner(),
+                height: (size.width > 950)
+                    ? size.height - (marginVertical * 2)
+                    : size.height - (minmarginVertical * 2),
+                width:
+                    (size.width < 950) ? size.width * 0.9 : size.width * 0.22,
+              ),
             ),
           ],
         ),
