@@ -7,6 +7,9 @@ import 'package:portafolio/Widgets/ImageHover.dart';
 import 'package:provider/provider.dart';
 
 class LeftBanner extends StatefulWidget {
+  final Function ontap;
+
+  const LeftBanner({Key key, this.ontap}) : super(key: key);
   @override
   _LeftBannerState createState() => _LeftBannerState();
 }
@@ -29,6 +32,8 @@ class _LeftBannerState extends State<LeftBanner> {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+    // print(size.width);
     return Container(
       decoration: BoxDecoration(
         color: Colors.white,
@@ -54,7 +59,22 @@ class _LeftBannerState extends State<LeftBanner> {
             style: textNameBold,
           ),
           Text('Ingeniero en Informática'),
-          SizedBox(height: 20),
+          SizedBox(height: 15),
+          if ((size.width < 950))
+            Material(
+              child: InkWell(
+                onTap: this.widget.ontap,
+                child: Container(
+                  width: double.infinity,
+                  child: Icon(
+                    Icons.close,
+                    size: 18,
+                    color: Colors.grey,
+                  ),
+                ),
+              ),
+            ),
+          SizedBox(height: 5),
           CustomDivider(
             color: utilsProvider.primaryColor,
           ),
@@ -63,6 +83,8 @@ class _LeftBannerState extends State<LeftBanner> {
             text: "ACERCA DE MI",
             ontap: () {
               utilsProvider.indexPage = IndexPage.About;
+              callCallaback();
+              // return this.widget.ontap;
               setState(() {});
             },
             status: utilsProvider.indexPage == IndexPage.About,
@@ -71,6 +93,7 @@ class _LeftBannerState extends State<LeftBanner> {
             text: "HABILIDADES",
             ontap: () {
               utilsProvider.indexPage = IndexPage.Skills;
+              callCallaback();
               setState(() {});
             },
             status: utilsProvider.indexPage == IndexPage.Skills,
@@ -79,6 +102,7 @@ class _LeftBannerState extends State<LeftBanner> {
             text: "PROYECTOS",
             ontap: () {
               utilsProvider.indexPage = IndexPage.Projects;
+              callCallaback();
               setState(() {});
             },
             status: utilsProvider.indexPage == IndexPage.Projects,
@@ -87,6 +111,7 @@ class _LeftBannerState extends State<LeftBanner> {
             text: "CONTACTO",
             ontap: () {
               utilsProvider.indexPage = IndexPage.Contact;
+              callCallaback();
               setState(() {});
             },
             status: utilsProvider.indexPage == IndexPage.Contact,
@@ -98,6 +123,10 @@ class _LeftBannerState extends State<LeftBanner> {
         ],
       ),
     );
+  }
+
+  void callCallaback() {
+    this.widget.ontap();
   }
 
   Widget _socialNetwork() {

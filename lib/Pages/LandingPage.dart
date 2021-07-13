@@ -5,16 +5,26 @@ import 'package:portafolio/Pages/LeftBanner.dart';
 import 'package:portafolio/Utils/UtilsDesign.dart';
 import 'package:provider/provider.dart';
 
-class LandingPage extends StatelessWidget {
+class LandingPage extends StatefulWidget {
+  @override
+  _LandingPageState createState() => _LandingPageState();
+}
+
+class _LandingPageState extends State<LandingPage> {
   final double marginHorizontal = 170;
   final double marginVertical = 80;
   final double minmarginHorizontal = 30;
   final double minmarginVertical = 40;
 
+  bool statusContract = true;
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     UtilsProvider utilsProvider = Provider.of<UtilsProvider>(context);
+    if (size.width >= 950) {
+      statusContract = true;
+    }
     return Scaffold(
       backgroundColor: utilsProvider.primaryColor,
       floatingActionButton: FloatingActionButton(onPressed: () {
@@ -52,7 +62,7 @@ class LandingPage extends StatelessWidget {
                   ),
               ],
             ),
-            if (size.width > 950)
+            if (size.width >= 950)
               Positioned(
                 right: 0,
                 child: Container(
@@ -62,24 +72,45 @@ class LandingPage extends StatelessWidget {
                   child: BoddyPage(),
                 ),
               ),
-            Positioned(
-              left: 0,
-              child: Container(
-                decoration: BoxDecoration(boxShadow: [
-                  BoxShadow(
-                    color: Colors.black12,
-                    blurRadius: 15,
-                    offset: Offset(10, 0),
-                  )
-                ]),
-                child: LeftBanner(),
-                height: (size.width > 950)
-                    ? size.height - (marginVertical * 2)
-                    : size.height - (minmarginVertical * 2),
-                width:
-                    (size.width < 950) ? size.width * 0.85 : size.width * 0.22,
+            if (size.width < 950 && !statusContract)
+              Positioned(
+                right: 0,
+                child: Container(
+                  // color: Colors.yellow,
+                  height: size.height - (minmarginVertical * 2),
+                  width: (size.width) - (minmarginHorizontal * 2),
+                  child: BoddyPage(ontap: () {
+                    statusContract = true;
+                    setState(() {});
+                  }),
+                ),
               ),
-            ),
+            if (statusContract)
+              Positioned(
+                left: 0,
+                child: Container(
+                  decoration: BoxDecoration(boxShadow: [
+                    BoxShadow(
+                      color: Colors.black12,
+                      blurRadius: 15,
+                      offset: Offset(10, 0),
+                    )
+                  ]),
+                  child: LeftBanner(
+                    ontap: () {
+                      statusContract = false;
+                      print('object');
+                      setState(() {});
+                    },
+                  ),
+                  height: (size.width > 950)
+                      ? size.height - (marginVertical * 2)
+                      : size.height - (minmarginVertical * 2),
+                  width: (size.width < 950)
+                      ? size.width * 0.85
+                      : size.width * 0.22,
+                ),
+              ),
           ],
         ),
       ),

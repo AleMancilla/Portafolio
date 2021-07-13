@@ -9,6 +9,9 @@ import 'package:portafolio/Widgets/CustomDivider.dart';
 import 'package:provider/provider.dart';
 
 class BoddyPage extends StatefulWidget {
+  final Function ontap;
+
+  const BoddyPage({Key key, this.ontap}) : super(key: key);
   @override
   _BoddyPageState createState() => _BoddyPageState();
 }
@@ -29,6 +32,7 @@ class _BoddyPageState extends State<BoddyPage> {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Container(
       child: Column(
         children: [
@@ -39,6 +43,15 @@ class _BoddyPageState extends State<BoddyPage> {
             color: Colors.transparent,
             child: Row(
               children: [
+                if (size.width < 950)
+                  Material(
+                    child: IconButton(
+                        icon: Icon(
+                          Icons.list,
+                          color: utilsProvider.primaryColor,
+                        ),
+                        onPressed: this.widget.ontap),
+                  ),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
