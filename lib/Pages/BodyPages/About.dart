@@ -17,6 +17,7 @@ class About extends StatelessWidget {
               width: 200,
               height: 200,
               child: ImageHover(
+                // imageAsset: 'assets/socialIcons/github.png',
                 imageAsset: 'assets/images/perfilGrey.png',
               ),
             ),

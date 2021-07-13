@@ -2,8 +2,11 @@ import 'package:flutter/material.dart';
 
 class ImageHover extends StatefulWidget {
   final String imageAsset;
+  final double wid;
+  final double hei;
 
-  const ImageHover({Key key, this.imageAsset}) : super(key: key);
+  const ImageHover({Key key, this.imageAsset, this.wid = 150, this.hei = 150})
+      : super(key: key);
   @override
   _ImageHoverState createState() => _ImageHoverState();
 }
@@ -64,8 +67,10 @@ class _ImageHoverState extends State<ImageHover> with TickerProviderStateMixin {
           scale: scale,
           child: Material(
             elevation: elevation,
-            child: Image.network(
+            child: Image.asset(
               this.widget.imageAsset,
+              width: this.widget.wid,
+              height: this.widget.hei,
             ),
           ),
         ),
