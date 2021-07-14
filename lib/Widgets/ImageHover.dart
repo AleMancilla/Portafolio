@@ -41,7 +41,22 @@ class _ImageHoverState extends State<ImageHover> with TickerProviderStateMixin {
   @override
   Widget build(context) {
     return InkWell(
-      onTap: () {},
+      onTap: () {
+        showDialog(
+          context: context,
+          builder: (context) {
+            return AlertDialog(
+              backgroundColor: Colors.transparent,
+              contentPadding: EdgeInsets.all(0),
+              content: Image.asset(
+                this.widget.imageAsset,
+                width: 450,
+                // height: 450,
+              ),
+            );
+          },
+        );
+      },
       onHover: (value) {
         // print(value);
         if (value) {

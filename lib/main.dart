@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (context) => new UtilsProvider()),
       ],
       child: MaterialApp(
-        title: 'Material App',
+        title: 'Portafolio Alejandro',
         home: LandingPage(),
       ),
     );
