@@ -80,13 +80,126 @@ class _BoddyPageState extends State<BoddyPage> {
                 // ),
                 IconButton(
                   icon: Icon(Icons.circle, color: utilsProvider.primaryColor),
-                  onPressed: () {},
+                  onPressed: () {
+                    showDialog(
+                      context: context,
+                      builder: (context) {
+                        return AlertDialog(
+                          content: Container(
+                            width: 200,
+                            // color: Colors.blue,
+                            child: Wrap(
+                              children: [
+                                _itemColor(Color.fromRGBO(211, 9, 21, 1), () {
+                                  utilsProvider.primaryColor =
+                                      Color.fromRGBO(211, 9, 21, 1);
+                                  Navigator.pop(context);
+                                }),
+                                _itemColor(Color.fromRGBO(195, 25, 99, 1), () {
+                                  utilsProvider.primaryColor =
+                                      Color.fromRGBO(195, 25, 99, 1);
+                                  Navigator.pop(context);
+                                }),
+                                _itemColor(Color.fromRGBO(169, 38, 251, 1), () {
+                                  utilsProvider.primaryColor =
+                                      Color.fromRGBO(169, 38, 251, 1);
+                                  Navigator.pop(context);
+                                }),
+                                _itemColor(Color.fromRGBO(98, 33, 230, 1), () {
+                                  utilsProvider.primaryColor =
+                                      Color.fromRGBO(98, 33, 230, 1);
+                                  Navigator.pop(context);
+                                }),
+                                _itemColor(Color.fromRGBO(52, 87, 250, 1), () {
+                                  utilsProvider.primaryColor =
+                                      Color.fromRGBO(52, 87, 250, 1);
+                                  Navigator.pop(context);
+                                }),
+                                _itemColor(Color.fromRGBO(46, 104, 251, 1), () {
+                                  utilsProvider.primaryColor =
+                                      Color.fromRGBO(46, 104, 251, 1);
+                                  Navigator.pop(context);
+                                }),
+                                _itemColor(Color.fromRGBO(24, 147, 231, 1), () {
+                                  utilsProvider.primaryColor =
+                                      Color.fromRGBO(24, 147, 231, 1);
+                                  Navigator.pop(context);
+                                }),
+                                _itemColor(Color.fromRGBO(30, 184, 210, 1), () {
+                                  utilsProvider.primaryColor =
+                                      Color.fromRGBO(30, 184, 210, 1);
+                                  Navigator.pop(context);
+                                }),
+                                _itemColor(Color.fromRGBO(30, 190, 165, 1), () {
+                                  utilsProvider.primaryColor =
+                                      Color.fromRGBO(30, 190, 165, 1);
+                                  Navigator.pop(context);
+                                }),
+                                _itemColor(Color.fromRGBO(30, 199, 89, 1), () {
+                                  utilsProvider.primaryColor =
+                                      Color.fromRGBO(30, 199, 89, 1);
+                                  Navigator.pop(context);
+                                }),
+                                _itemColor(Color.fromRGBO(105, 219, 48, 1), () {
+                                  utilsProvider.primaryColor =
+                                      Color.fromRGBO(105, 219, 48, 1);
+                                  Navigator.pop(context);
+                                }),
+                                _itemColor(Color.fromRGBO(176, 232, 46, 1), () {
+                                  utilsProvider.primaryColor =
+                                      Color.fromRGBO(176, 232, 46, 1);
+                                  Navigator.pop(context);
+                                }),
+                                _itemColor(Color.fromRGBO(254, 213, 48, 1), () {
+                                  utilsProvider.primaryColor =
+                                      Color.fromRGBO(254, 213, 48, 1);
+                                  Navigator.pop(context);
+                                }),
+                                _itemColor(Color.fromRGBO(253, 170, 41, 1), () {
+                                  utilsProvider.primaryColor =
+                                      Color.fromRGBO(253, 170, 41, 1);
+                                  Navigator.pop(context);
+                                }),
+                                _itemColor(Color.fromRGBO(253, 109, 33, 1), () {
+                                  utilsProvider.primaryColor =
+                                      Color.fromRGBO(253, 109, 33, 1);
+                                  Navigator.pop(context);
+                                }),
+                                _itemColor(Color.fromRGBO(219, 46, 23, 1), () {
+                                  utilsProvider.primaryColor =
+                                      Color.fromRGBO(219, 46, 23, 1);
+                                  Navigator.pop(context);
+                                }),
+                              ],
+                            ),
+                          ),
+                        );
+                      },
+                    );
+                  },
                 ),
               ],
             ),
           ),
           Expanded(child: _body()),
         ],
+      ),
+    );
+  }
+
+  Widget _itemColor(Color color, Function ontap) {
+    return Material(
+      child: InkWell(
+        onTap: ontap,
+        child: Container(
+          width: 30,
+          height: 30,
+          margin: EdgeInsets.all(8),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(5),
+            color: color,
+          ),
+        ),
       ),
     );
   }

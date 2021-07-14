@@ -27,9 +27,9 @@ class _LandingPageState extends State<LandingPage> {
     }
     return Scaffold(
       backgroundColor: utilsProvider.primaryColor,
-      floatingActionButton: FloatingActionButton(onPressed: () {
-        utilsProvider.primaryColor = Colors.red;
-      }),
+      // floatingActionButton: FloatingActionButton(onPressed: () {
+      //   utilsProvider.primaryColor = Colors.red;
+      // }),
       body: Container(
         decoration: BoxDecoration(
           color: Colors.white,
