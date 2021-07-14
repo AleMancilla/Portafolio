@@ -10,6 +10,12 @@ const TextStyle textContactSubTitle =
 const TextStyle textTitleSkill =
     TextStyle(fontWeight: FontWeight.w600, color: Colors.white, fontSize: 17);
 
+const TextStyle textTitleCardProyect = TextStyle(fontWeight: FontWeight.w600);
+TextStyle textdescription =
+    TextStyle(fontWeight: FontWeight.w400, color: Colors.grey[800]);
+const TextStyle textTecnologies =
+    TextStyle(fontWeight: FontWeight.w600, color: Colors.grey);
+
 BorderRadiusGeometry borderRadiusGlobal = BorderRadius.circular(5);
 
 enum IndexPage {

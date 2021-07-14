@@ -29,6 +29,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   provider: ^5.0.0
+  infinite_carousel: ^1.0.1
 
 dev_dependencies:
   flutter_test:
@@ -52,6 +53,15 @@ flutter:
     - assets/icons/iconsSkills/
     - assets/IconsSocialNetwork/
     - assets/socialIcons/
+    - assets/proyects/guimyApp/
+    - assets/proyects/CopaAmerica2021/
+    - assets/proyects/ElChaskiCRM/
+    - assets/proyects/ElChaskiDelivery/
+    - assets/proyects/ElChaskiRestaurante/
+    - assets/proyects/ElChaskiRider/
+    - assets/proyects/MuseosApp/
+    - assets/proyects/PollaCopaAmerica/
+    - assets/proyects/TaxisApp/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

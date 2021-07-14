@@ -99,7 +99,7 @@ class _LandingPageState extends State<LandingPage> {
                   child: LeftBanner(
                     ontap: () {
                       statusContract = false;
-                      print('object');
+                      // print('object');
                       setState(() {});
                     },
                   ),
