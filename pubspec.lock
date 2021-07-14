@@ -57,6 +57,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.2.0"
+  finite_coverflow:
+    dependency: "direct main"
+    description:
+      name: finite_coverflow
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.0"
   flutter:
     dependency: "direct main"
     description: flutter
@@ -67,13 +74,6 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
-  infinite_carousel:
-    dependency: "direct main"
-    description:
-      name: infinite_carousel
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.0.1"
   matcher:
     dependency: transitive
     description:
@@ -172,4 +172,4 @@ packages:
     version: "2.1.0"
 sdks:
   dart: ">=2.12.0 <3.0.0"
-  flutter: ">=1.17.0"
+  flutter: ">=1.16.0"
