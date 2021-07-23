@@ -74,7 +74,8 @@ class _CardContactMeState extends State<CardContactMe> {
               ),
             ),
             Material(
-                child: IconButton(icon: Icon(Icons.link), onPressed: () {})),
+                child: IconButton(
+                    icon: Icon(Icons.link), onPressed: this.widget.ontap)),
           ],
         ),
       ),

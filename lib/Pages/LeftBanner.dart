@@ -58,7 +58,7 @@ class _LeftBannerState extends State<LeftBanner> {
             'Alejandro Mancilla',
             style: textNameBold,
           ),
-          Text('Ingeniero en Informática'),
+          Text('Mobile app developer'),
           SizedBox(height: 15),
           if ((size.width < 950))
             Material(
@@ -133,10 +133,18 @@ class _LeftBannerState extends State<LeftBanner> {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        _imageSocial('assets/IconsSocialNetwork/whatsapp.png', () {}),
-        _imageSocial('assets/IconsSocialNetwork/facebook.png', () {}),
-        _imageSocial('assets/IconsSocialNetwork/instagram.png', () {}),
-        _imageSocial('assets/IconsSocialNetwork/github.png', () {}),
+        _imageSocial('assets/IconsSocialNetwork/whatsapp.png', () {
+          launchURL('https://api.whatsapp.com/send?phone=59165537461');
+        }),
+        _imageSocial('assets/IconsSocialNetwork/facebook.png', () {
+          launchURL('https://www.facebook.com/alejandro.mancilla.125/');
+        }),
+        _imageSocial('assets/IconsSocialNetwork/instagram.png', () {
+          launchURL('https://www.instagram.com/ale_mancilla__/');
+        }),
+        _imageSocial('assets/IconsSocialNetwork/github.png', () {
+          launchURL('https://github.com/AleMancilla');
+        }),
       ],
     );
   }

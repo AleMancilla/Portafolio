@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 const Color backGroundBoddyColor = Color.fromRGBO(30, 184, 210, 1.0);
 
@@ -24,3 +25,6 @@ enum IndexPage {
   Projects,
   Contact,
 }
+
+void launchURL(_url) async =>
+    await canLaunch(_url) ? await launch(_url) : throw 'Could not launch $_url';

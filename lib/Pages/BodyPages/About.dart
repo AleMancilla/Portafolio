@@ -30,17 +30,24 @@ class About extends StatelessWidget {
                 child: Container(
                   padding: EdgeInsets.symmetric(horizontal: 15, vertical: 20),
                   child: Text(
-                      '''Lorem ex labore tempor sit laboris nisi consequat mollit. Ea duis commodo duis aute minim velit. Enim irure nisi id consequat elit mollit magna sint pariatur excepteur eiusmod. Aute cillum et nulla exercitation dolore anim ut reprehenderit incididunt voluptate officia. Enim incididunt cillum eiusmod reprehenderit nulla nostrud exercitation dolore commodo magna id voluptate et.
+                      '''Hola, me llamo Alejandro Mancilla, soy estudiante de la Carrera de Informática cursando el 8.º semestre. Me encanta la programación, hacer aplicaciones / software para dispositivos móviles. Desde niño tuve un gran interés sobre las computadoras y celulares en cuanto el funcionamiento de las mismas y los programas que pueden ejecutarlos al igual que las vulnerabilidades.
 
-Esse enim et ipsum sint exercitation occaecat excepteur anim sint voluptate laboris. Eiusmod esse commodo quis veniam ipsum qui ex nulla ad dolor deserunt ipsum nulla mollit. Laborum ex dolor ad minim irure sint amet. Do cupidatat aute magna aliquip.
+Mis primeros comienzos fue a los 14 años con el software Photoshop CSS3 realizando diseños, edición de fotos y recreación de logos en una pequeña notebook el cual no soportaba juegos por lo cual me pasaba todo el día mejorando mis habilidades en diseño.
 
-Eiusmod occaecat veniam ea anim nulla est. Elit ullamco adipisicing occaecat nulla nulla laborum sint cupidatat magna. Veniam magna reprehenderit consequat fugiat nulla amet nisi aute duis ea irure duis Lorem non. Veniam officia minim laboris labore officia cupidatat anim adipisicing consectetur culpa sunt. Incididunt deserunt adipisicing in consequat aliqua deserunt proident irure. Ea exercitation do ipsum duis proident ut ullamco ea nulla elit consectetur.
+A los 16 estando en 4to de secundaria me propuse a hacer una aplicación "Cancionero Boliviano" totalmente completo con historia, sonido, vocabulario, imágenes, etc. Sin saber nada de programación me propuse a realizar dicha aplicación. Utilizando el software "AppInventor" tarde dos semanas en el desarrollo de la misma y una vez completo la compartí con mi grupo de amigos de colegio.
 
-Aliquip culpa incididunt pariatur laboris aute tempor irure proident officia id. Dolor dolor reprehenderit magna sint irure laborum amet deserunt. Lorem in aliquip cillum adipisicing velit. Lorem sint in commodo consequat commodo ullamco ipsum magna dolore fugiat excepteur sint. Adipisicing esse veniam incididunt enim. Pariatur ut velit voluptate adipisicing irure qui. Consequat anim sint veniam excepteur est aute fugiat in Lorem enim aliquip officia qui.
+A los 17 aun más curioso sobre el mundo de la programación empece a tomar cursos de programación en C desarrollando programas sencillos como Calculadoras, Menús, formularios, etc.
 
-Irure aliqua laborum proident mollit dolore elit in tempor. Non magna anim voluptate aliqua ex ullamco velit officia nulla in cupidatat cupidatat ex et. Est minim officia veniam nostrud cupidatat consequat commodo sint dolor excepteur culpa occaecat do non. Qui ad ea fugiat eu eu Lorem ipsum quis sint reprehenderit nostrud magna deserunt nisi. Veniam cillum in aliqua reprehenderit non sunt consequat aliqua. Eiusmod duis do proident mollit officia reprehenderit do qui id nostrud Lorem sint irure. Pariatur ut sunt labore excepteur et nisi pariatur do.
+A los 18 me decidí a hacer mi Servicio Militar en la Fuerza Aérea donde aprendí sobre Energías limpias más específico sobre Paneles Solares obteniendo un título de Técnico Básico en Manejo de Paneles Solares y al mismo tiempo tome un curso de reparación de celulares el cual me introdujo al manejo de Hardware, Terminando el Servicio militar aprendí el manejo de placas "Arduino" donde obtuve más conocimiento sobre el Hardware y Software.
 
-Consequat incididunt proident eu laborum tempor commodo ad laborum adipisicing. Ut ea anim quis culpa exercitation. Ea ipsum voluptate cillum laboris sunt esse dolore esse mollit ut cillum est velit duis. Ut magna exercitation officia anim sit. Proident consectetur deserunt velit laboris tempor ut eiusmod occaecat magna labore id.'''),
+En mi primer año de universidad quise aprender a hacer aplicaciones Android, pero no obtuve el apoyo que esperaba, así que siendo autodidacta aprendí lo suficiente para hacer un juego de cartas llamado "Nervioso" juego que compartí y jugué con amigos de la carrera. 
+
+En mi segundo año de Universidad tuve la oportunidad de profundizar mis conocimientos de Arduino y luego de mucha práctica empezó a dar clases a estudiantes nuevos sobre Robótica con Arduino e Internet de las cosas.
+
+En mi tercer año de universidad algunos amigos me comentaban sobre un framework nuevo que estaba surgiendo para el desarrollo de aplicaciones Android/Ios, el framework era llamado "Flutter" que aún estaba en desarrollo, y cuando empece a aprenderlo vi el gran potencial que tenía así que todo el año 2020 me dedique enteramente a mejorar mis habilidades en el desarrollo de aplicaciones Móviles y Web con Flutter.
+
+Este año 2021 espero seguir mejorando mis habilidades en el desarrollo de aplicaciones y terminar de aprender el desarrollo de páginas web con React.
+'''),
                 ),
               ),
             ),
