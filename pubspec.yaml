@@ -65,6 +65,10 @@ flutter:
     - assets/proyects/MuseosApp/
     - assets/proyects/PollaCopaAmerica/
     - assets/proyects/TaxisApp/
+
+    # LANGUAJES
+    - lib/Core/i18n/
+
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
